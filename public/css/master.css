@@ -1,0 +1,245 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+option{
+
+}
+
+.green_window {
+    display: inline-block;
+    width: 366px; height: 34px;
+    border: 3px solid #200400;
+    background: white;
+}
+.input_text {
+    width: 348px; height: 21px;
+    margin: 6px 0 0 9px;
+    border: 0;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+}
+.sch_smit {
+    width: 54px; height: 40px;
+    margin: 0; border: 0;
+    vertical-align: top;
+    background: #200400;
+    color: white;
+    font-weight: bold;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.sch_smit:hover {
+    background: #56C82C;
+}
+.breadcrumb-item {
+  font-size: 0.8em !important;
+}
+.ellipsis{
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.crawlingfont{
+  font-size:12px;
+  padding-left:1px;
+  align-content: flex-start;
+}
+.list-group-item{
+  height : 25%;
+  font-family :sans-serif;
+  padding-left : 30px;
+  padding-top :45px;
+
+
+  font-weight :bold;
+
+}
+.list-group{
+  padding-top:80px;
+  height :100%;
+
+}
+
+.board-table {
+  table-layout: fixed;
+}
+.board-table .numId,
+.board-table .views{
+  width: 60px;
+  text-align: center;
+}
+.board-table .author,
+.board-table .date {
+  width: 100px;
+  text-align: center;
+}
+.board-table .title-container:hover .title-comments,
+.board-table .title-container:hover .title-text
+{
+  text-decoration: underline;
+}
+
+.post-body,
+.comment-text {
+  white-space: pre-line;
+}
+.post-info{
+  font-size: 0.8em;
+}
+
+.user-form {
+  width: 400px;
+}
+
+.post-index-tool {
+  max-width: 450px;
+}
+.post-index-tool input[type='text']{
+  max-width: 130px;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.comment-edit,
+.comment-reply,
+.comment-edit-enabled .comment-show {
+  display:none;
+}
+
+.comment-edit-enabled .comment-edit,
+.comment-reply-enabled .comment-reply {
+  display:inherit;
+}
+.left{
+    width:15%;
+    height:855px;
+    background-color:#f9622e;
+    color:white;
+    overflow:hidden;
+    float:left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+.font1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+.sidebar-nav {
+           top: 0;
+           left:0px;
+           width: 100px;
+           margin:0;
+
+           padding: 0;
+           list-style: none;
+    }
+
+    .sidebar-nav li {
+           text-indent: 5px;
+           line-height: 50px;
+    }
+
+    .sidebar-nav li a {
+           display: block;
+           text-decoration: none;
+           color: #999999;
+    }
+
+    .sidebar-nav li a:hover {
+           text-decoration: none;
+           color: #000;
+           background: rgba(255,255,255,0.2);
+    }
+
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus {
+           text-decoration: none;
+    }
+
+    .sidebar-nav > .sidebar-brand {
+           height: 65px;
+           font-size: 18px;
+           line-height: 60px;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+           color: #999999;
+    }
+
+    .sidebar-nav > .sidebar-brand a:hover {
+           color: #000;
+           background: none;
+    }
+select {
+width: 200px;
+padding: .8em .5em;
+border: 3px solid #999;
+font-family: inherit;
+background: url('arrow.jpg') no-repeat 95% 50%;
+border-radius: 15px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+}
+button{
+  border-radius: 15px;
+
+}
+select::-ms-expand {
+    display: none;
+}
+/*시군구선택*/
+section {
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
+.map{
+  height:50%;
+  width:60%;
+}
+.login-form{
+  position: absolute;
+  width:auto;
+  height:auto;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+
+  }
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
