@@ -264,13 +264,14 @@ router.get('/hotplace',function(req,res,next){
                       log('1');
                       //log("ARRRRRRRRRRRRRRRRR" + array + "test1=" + test1);
                       let data =  ulList.filter(n => n.title);
+                      log(data);
                       return data;
 
                     }).then(res => callback(null,res));
 
 
 
-          }, 400);
+          }, 1500);
       },
       function (callback) {
           setTimeout(function () {
@@ -309,10 +310,11 @@ router.get('/hotplace',function(req,res,next){
 
                       //log("ARRRRRRRRRRRRRRRRR" + array + "test1=" + test1);
                       let data =  ulList.filter(n => n.title);
+                      log(data);
                       return data;
 
               }).then(res => callback(null, res));
-          }, 200);
+          }, 1500);
       },
 
       function(callback){
@@ -329,12 +331,16 @@ router.get('/hotplace',function(req,res,next){
                         });
 
 
-        },300);
+        },500);
       }
   ];
 
-  async.series(tasks, function (err, results) {
+  async.parallel(tasks, function (err, results) {
 
+    if(err){
+      console.log("에러발견");
+
+    }
       res.render('home/about',{
          sido: query_sido,
          gugun : query_gugun,

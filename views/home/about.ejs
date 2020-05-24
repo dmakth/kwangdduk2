@@ -86,18 +86,10 @@
           </button>
         </div>
     <% } else if(option =='hotplace'){ %>
-      <% if(dataexist =='false') { %>
-        <div class="col-12 alert alert-warning alert-dismissible fade show" role="alert">
-          죄송합니다! <strong>지역을 올바르게 선택</strong>하신 후에 다시 한번 검색해주시면 감사하겠습니다.
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">3</span>
-          </button>
-        </div>
 
-      <% }else{ %>
 
       <%- include('../partials/crawling') %>
-      <% } %>
+
     <% } else if(option == 'normal'){ %>
 
     <%- include(path) %>
