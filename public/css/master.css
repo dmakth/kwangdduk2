@@ -5,23 +5,40 @@ body {
 option{
 
 }
-.alert{
-    background-color:  #292b2c;
-      color: #fff;
-}
-.list-group-item {
-  background-color: #fff;
-  border-top: 1px solid  #292b2c;
-  border-left-color: #fff;
-  border-right-color: #fff;
-}
 
+.btn-secondary{
+  font-size:15px;
+  height:45px;
+}
+.card{
+      align-content:center;
+}
+.card-header{
+    align-content:center;
+    text-align:center;
+}
+.btn-dark{
+  width:80%;
+
+  align-content:center;
+  background:#929292;
+
+  margin-left:10%;
+}
 .list-group-item:hover {
   background-color:  #292b2c;
     box-shadow: 0px 15px 20px rgba(41, 43, 44, 0.4);
       color: #fff;
         transform: translateY(-7px) translateX(-5px);
+
 }
+.alert-warning{
+    background-color:  #292b2c;
+      color: #fff;
+}
+
+
+
 
 .wrap {
   width:100%;
@@ -41,7 +58,7 @@ option{
   letter-spacing: 2.5px;
   font-weight: 500;
   color: #000;
-  background-color: #fff;
+  background-color:#ebeeec;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -55,6 +72,7 @@ option{
   box-shadow: 0px 15px 20px rgba(41, 43, 44, 0.4);
   color: #fff;
   transform: translateY(-7px);
+
 }
 .green_window {
     display: inline-block;
@@ -63,7 +81,7 @@ option{
     background: white;
 }
 .input_text {
-    width: 348px; height: 21px;
+    width: 328px; height: 21px;
     margin: 6px 0 0 9px;
     border: 0;
     line-height: 21px;
@@ -95,7 +113,7 @@ option{
   text-overflow: ellipsis;
 }
 .crawlingfont{
-  font-size:12px;
+  font-size:18px;
   padding-left:1px;
   align-content: flex-start;
 }
@@ -104,13 +122,17 @@ option{
   font-family :sans-serif;
   padding-left : 30px;
   padding-top :45px;
-
-
+  font-size:18px;
+  background-color: #fff;
+  border-top: 1px solid  #292b2c;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
   font-weight :bold;
 
 }
 .list-group{
-  padding-top:80px;
+  padding-top:10px;
   height :auto;
 
 }
@@ -234,11 +256,9 @@ width: 80%;
 padding: .8em .5em;
 border: 3px solid #999;
 font-family: inherit;
-background: url('arrow.jpg') no-repeat 95% 50%;
+
 border-radius: 15px;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
+
 
 }
 button{
