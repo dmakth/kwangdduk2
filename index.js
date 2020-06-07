@@ -8,8 +8,7 @@ var passport = require('./config/passport');
 var util = require('./util');
 var app = express();
 var fs = require('fs');
-const axios = require("axios");
-const cheerio = require("cheerio");
+
 //jsonfactory
 
 // DB setting
