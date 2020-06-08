@@ -7,22 +7,7 @@ const cheerio = require("cheerio");
 const fs = require('fs');
 
 var urlencode = require('urlencode');
-var gugun_list = [
-  "전체","가로수길","동대문","북촌한옥마을","압구정","이태원","인사동","삼성동","서초구","서울역","신촌",
-  "전체","포곡읍",
-  "전체","간석동","부평역","용현동",
-  "전체","고잔역","중앙역","한대앞역",
-  "전체","북한강","퇴계원","호평동",//
-  "전체","남이섬","아침고요수목원","쁘띠프랑스",
-  "전체","킨텍스","종합운동장","일산호수","일산 백석동",
-  "전체","수원역","아주대","인계동","장안구",
-  "전체","강릉시","경포해변",
-  "전체","서대전","둔산동","용천동","대전궁동","탄방동","괴정동","대전역",
-  "전체","대구중앙로","동성로","동대구역","수성구","계명대","두류동","수성구",
-  "전체","전북대학교","전주대학교","월드컵경기장","효자공원",
-  "전체","부산역","남천동","서면","부산교대역","센텀시티","해운대",
-  "전체","제주시","서귀포시"
-];
+
 
 
 var sido_selected = '';
@@ -36,7 +21,7 @@ router.get('/', function(req, res, next){
 });
 
 router.get('/',function(req,res){
-  console.log('testok');
+  console.log('mainpage');
 });
 
 router.get('/table',function(req,res){
@@ -64,7 +49,7 @@ if(req.query.sido =='시/도선택' || req.query.gugun == '구/군선택')
     });
 
 });
-
+//기본 검색 페이지 이동
 router.get('/test',function(req,res,next){
 
 
@@ -88,7 +73,7 @@ router.get('/test',function(req,res,next){
         log(filelist);
         //console.log(filelist[match_gugun_list(test1,test2)+1]);
         var path = '../partials/twitter/'+ change_sido_KtoE(test1) +'/' + filelist[match_gugun_list(test1,test2)];
-        console.log(path);
+        ;
        res.render('home/about',{
          sido: test1,
          gugun : test2,
@@ -106,6 +91,7 @@ router.get('/test',function(req,res,next){
 
   //  });
 });
+//카테고리 분석 페이지 이동
 router.get('/categori',function(req,res,next){
 
 
@@ -150,6 +136,7 @@ router.get('/categori',function(req,res,next){
 
 
 });
+//TopN 페이지이동
 router.get('/top10',function(req,res,next){
 
 
@@ -202,7 +189,7 @@ router.get('/top10',function(req,res,next){
       //  console.log(rData);
 
   //  });
-
+//크롤링 페이지 이동
 router.get('/hotplace',function(req,res,next){
   var query_sido = req.query.sido;
   var query_gugun =req.query.gugun;
@@ -231,10 +218,10 @@ router.get('/hotplace',function(req,res,next){
       function (callback) {
           setTimeout(function () {
 
-              console.log('one');
+
               const getHtml = async () => {
                 try {
-                  log('0');
+
                   return await axios.get("https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&sq=&o=&q="+ urlencode(findQuery(query_sido,query_gugun)) + urlencode(query_category));
 
                 } catch (error) {
@@ -262,10 +249,10 @@ router.get('/hotplace',function(req,res,next){
                 //          fs.appendFileSync('first-json.json', bookJson);
                 //        }
                       });
-                      log('1');
+
                       //log("ARRRRRRRRRRRRRRRRR" + array + "test1=" + test1);
                       let data =  ulList.filter(n => n.title);
-                      log(data);
+
                       return data;
 
                     }).then(res => callback(null,res));
@@ -276,11 +263,11 @@ router.get('/hotplace',function(req,res,next){
       },
       function (callback) {
           setTimeout(function () {
-              console.log('two');
+
 
               const getHtml2 = async () => {
                 try {
-                  log('5');
+
                   return await axios.get("https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&sq=&o=&q="+ urlencode(findQuery(query_sido,query_gugun)) + urlencode('맛집'));
                   log('https://search.naver.com/search.naver?query=' + urlencode(query_sido) + urlencode(query_category));
                 } catch (error) {
@@ -314,7 +301,7 @@ router.get('/hotplace',function(req,res,next){
 
                       //log("ARRRRRRRRRRRRRRRRR" + array + "test1=" + test1);
                       let data =  ulList.filter(n => n.title);
-                      log(data);
+
                       return data;
 
               }).then(res => callback(null, res));
@@ -323,14 +310,14 @@ router.get('/hotplace',function(req,res,next){
 
       function(callback){
         setTimeout(function() {
-          console.log('three');
+
           var testFolder = './views/partials/img/' + change_sido_KtoE(query_sido);
 
          fs.readdir(testFolder,function(error,filelist){
-                          log('13' + filelist[match_gugun_list(query_sido,query_gugun_for_path)]);
+
                            //console.log(filelist[match_gugun_list(test1,test2)+1]);
                            let path = change_sido_KtoE(query_sido) +'/' + filelist[match_gugun_list(query_sido,query_gugun_for_path)];
-                           console.log("PATH :" +path);
+
                            callback(null,path);
                         });
 
